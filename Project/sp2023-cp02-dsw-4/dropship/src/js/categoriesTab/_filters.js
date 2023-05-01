@@ -4,14 +4,14 @@ const rightArrow = document.getElementById('right-arrow');
 
 leftArrow.addEventListener('click', () => {
   container.scrollBy({
-    left: -200,
+    left: -1000,
     behavior: 'smooth'
   });
 });
 
 rightArrow.addEventListener('click', () => {
   container.scrollBy({
-    left: 200,
+    left: 1000,
     behavior: 'smooth'
   });
 });

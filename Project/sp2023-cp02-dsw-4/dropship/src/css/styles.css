@@ -774,15 +774,34 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 20rem;
   margin: 0;
+}
+#masterContainer img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+#masterContainer .arrow {
+  border-radius: 20px 6px;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  align-items: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 #container {
+  border-radius: 10px;
   position: relative;
   display: flex;
   align-items: center;
-  width: 75vw;
+  width: 50vw;
   height: 200px;
   overflow-x: scroll;
   white-space: nowrap;
@@ -790,32 +809,12 @@ main {
   overflow-y: hidden;
 }
 
-img {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-}
-
-.arrow {
-  position: absolute;
-  top: 37%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  line-height: 50px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
 #left-arrow {
-  left: 10px;
+  left: 400px;
 }
 
 #right-arrow {
-  right: 10px;
+  right: 400px;
 }
 
 .loginDropdown {
