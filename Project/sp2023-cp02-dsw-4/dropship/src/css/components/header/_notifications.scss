@@ -1,0 +1,41 @@
+@use '../../abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+// NOTIFICATION CARD
+
+.cartNotification {
+    position: relative;
+    min-width: 10rem;
+    border-radius: 0.3vmax;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right, var(--accent), var(--secAccent));
+    max-height: 0;
+    color: black;
+
+    ul {
+        position: relative;
+        padding: 0.3vmax;
+    }
+
+    .notifCancel {
+        position: relative;
+        bottom: -0.5vmax;
+        width: 100%;
+        color: red;
+        background-color: white;
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+        font-family: 'Share Tech', sans-serif;
+        padding: 0.2vmax;
+        border-radius: 0.5vmax;
+        transition: 300ms all ease;
+        margin-bottom: 0.7rem;
+
+        &:hover {
+            color: white;
+            background-color: red;
+            transition: 300ms all ease;
+        }
+    }
+}

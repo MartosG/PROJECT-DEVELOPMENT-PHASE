@@ -1,0 +1,103 @@
+@use '../../abstracts' as *;
+
+// SEARCH BAR
+
+.search-bar-container {
+    position: absolute;
+    top: 0;
+    height: 3rem;
+    width: 35rem;
+    @include flexbox($placeItems: center);
+    border-top-left-radius: 1.7rem;
+    border-top-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 1.7rem;
+    border: 0.15rem solid var(--tertColor);
+    background-color: var(--tpPri);
+    backdrop-filter: blur(2rem);
+    overflow: hidden;
+    transition: 300ms all ease;
+    z-index: 6;
+
+    .search-bar {
+        font-size: 1.4rem;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-radius: inherit;
+        border: none;
+        outline: none;
+        text-indent: 1rem;
+        color: var(--secColor);
+    }
+
+    button {
+        position: relative;
+        height: 100%;
+
+        ::before {
+            content: '';
+            inset: 0;
+            position: absolute;
+            filter: blur(1.5rem);
+            transition: 300ms all ease;
+        }
+
+        &.clearButton,
+        &#searchButton {
+            margin-left: 0.3rem;
+            display: none;
+        }
+
+        &.categoriesButton {
+            position: relative;
+            margin-right: 0.6rem;
+        }
+
+        &:hover {
+            color: var(--accent);
+            transition: 300ms all ease;
+
+            .material-symbols-outlined {
+                color: var(--accent);
+            }
+
+            ::before {
+                background-color: var(--accent);
+            }
+        }
+    }
+
+    .divider {
+        position: relative;
+        border-left: 0.2rem solid var(--accent);
+        height: 70%;
+        border-radius: 1rem;
+        margin: 0 0.3rem 0 0.3rem;
+    }
+}
+
+.visible {
+    display: block !important;
+}
+
+// SEACH BAR STATES
+
+.active {
+    border: 0.15rem solid var(--accent) !important;
+    transition: 300ms all ease;
+}
+
+.opCt {
+    top: -2.9rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.opSg {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
